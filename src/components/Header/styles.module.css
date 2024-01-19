@@ -1,0 +1,73 @@
+.root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  min-height: 64px;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.nativeSelect {
+  display: flex !important;
+  justify-content: space-around;
+  height: 100%;
+
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  padding: 20px;
+}
+.selectFilm {
+  flex-grow: 1;
+  height: 100%;
+}
+.formControl {
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.inputBase {
+  margin-left: 12px;
+  width: 80%;
+  display: flex;
+  flex: 1 !important;
+  padding: 5px;
+  justify-content: left;
+}
+.list_khoahoc_wrapper {
+  position: relative;
+}
+
+.list_khoahoc {
+  position: absolute;
+  width: 100%;
+  max-height: 20rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+}
+.username {
+  line-height: 2.5 !important;
+  font-size: 16px !important;
+  cursor: pointer;
+  font-weight: bold !important;
+}
+.username:hover {
+  color: #f55f8d;
+}
+.title_khoahoc_wrapper {
+  width: 100%;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.button_delete {
+  color: red;
+  position: absolute;
+  right: 30px;
+  font-weight: bold;
+}

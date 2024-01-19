@@ -1,0 +1,11 @@
+.card_item {
+  transition: all 1s !important;
+  border: 3px solid transparent;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.card_item:hover {
+  transform: translateY(-20px);
+  border-image: url(../../../assets/br.png) 1 round !important;
+}
