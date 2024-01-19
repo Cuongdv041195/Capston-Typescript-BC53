@@ -1,9 +1,10 @@
 .background {
   background-image: url(../../../assets/teach.png);
-  height: 500px;
-  width: 100%;
+  height: auto;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
 }
 .title {
   text-align: center;
@@ -16,6 +17,14 @@
   padding: 20px 0;
   align-items: center;
 }
+.wrapper_item {
+  text-align: center;
+  padding: 20px 0;
+}
+.content h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
 .item h3 {
   font-size: 20px;
   font-weight: bold;
@@ -26,4 +35,16 @@
 }
 .item img:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 992px) {
+  .item h3 {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+  }
+  .item p {
+    font-size: 14px;
+  }
+  .content h3 {
+    font-size: 30px;
+  }
 }

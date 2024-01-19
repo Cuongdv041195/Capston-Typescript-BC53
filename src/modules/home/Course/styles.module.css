@@ -9,3 +9,13 @@
   transform: translateY(-20px);
   border-image: url(../../../assets/br.png) 1 round !important;
 }
+.picture {
+  height: 250px;
+  width: 100%;
+  border: 1px outset;
+}
+@media screen and (max-width: 992px) {
+  .picture {
+    height: 250px !important;
+  }
+}

@@ -19,7 +19,7 @@
   font-weight: 500 !important;
   padding: 20px;
 }
-.selectFilm {
+.selectCourse {
   flex-grow: 1;
   height: 100%;
 }
@@ -56,6 +56,7 @@
   font-size: 16px !important;
   cursor: pointer;
   font-weight: bold !important;
+  min-width: 85px;
 }
 .username:hover {
   color: #f55f8d;
@@ -70,4 +71,75 @@
   position: absolute;
   right: 30px;
   font-weight: bold;
+}
+.logout_button {
+  font-size: 16px !important;
+  min-width: 150px !important;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background-color: #fff;
+  border: 2px solid #000;
+  overflow-y: scroll;
+  box-shadow: 24;
+  padding: 15px;
+}
+.modal h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}
+@media screen and (max-width: 1200px) {
+  .username {
+    line-height: 1.5 !important;
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .username {
+    line-height: 1.5 !important;
+    font-size: 14px !important;
+  }
+  .logout_button {
+    font-size: 12px !important;
+  }
+  .modal {
+    width: 800px !important;
+    height: 500px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 650px !important;
+    height: 450px !important;
+  }
+  .modal h1 {
+    font-size: 20px !important;
+    padding: 10px 0 !important;
+  }
+  .modal h2 {
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 630px) {
+  .modal {
+    width: 500px !important;
+    height: 400px !important;
+  }
+  .modal h1 {
+    font-size: 16px !important;
+    padding: 5px 0 !important;
+  }
+  .modal h2 {
+    font-size: 0.75rem !important;
+  }
+  .modal h4 {
+    font-size: 0.75rem !important;
+  }
 }

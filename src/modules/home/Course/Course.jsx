@@ -48,7 +48,7 @@ const Course = () => {
             <Grid item xs={6} md={4} lg={3} key={item.maKhoaHoc}>
               <Card className={classes.card_item}>
                 <CardMedia
-                  sx={{ height: 250, width: '100%', border: '1px outset ' }}
+                  className={classes.picture}
                   image={item.hinhAnh}
                   title="green iguana"
                 />

@@ -1,12 +1,19 @@
 .content {
   color: #f55f8d;
   padding: 100px !important;
+  position: absolute;
+  right: 50px;
+}
+.content h1 {
+  font-size: 40px !important;
+  font-weight: bold;
 }
 .background {
   background-image: url(../../../assets/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
+  height: 500px;
+  width: 100vw;
 }
 .button {
   background: linear-gradient(to right, #f631f9 0, #ffc073 51%, #f55f8d 100%);
@@ -23,4 +30,29 @@
 .button:hover {
   /* transform: scale(0.9); */
   background-position: right center;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    padding: 100px !important;
+  }
+  .content h1 {
+    font-size: 30px !important;
+  }
+  .content h3 {
+    font-size: 16px !important;
+  }
+  .content a {
+    /* min-width: 150px; */
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 737px) {
+  .content h1 {
+    font-size: 25px !important;
+    padding: 0 !important;
+  }
+  .content a {
+    font-size: 12px;
+  }
 }

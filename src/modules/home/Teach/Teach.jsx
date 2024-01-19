@@ -14,11 +14,10 @@ const Teach = () => {
             className={classes.wrapper}
             style={{ height: '500px' }}
           >
-            <Grid item xs={4} className={classes.item}>
+            <Grid item xs={4} className={classes.content}>
               <Typography
                 component="h3"
                 style={{
-                  fontSize: '40px',
                   marginBottom: '15px',
                   textAlign: 'left',
                   lineHeight: 'normal',
@@ -47,7 +46,7 @@ const Teach = () => {
           <Typography component="h1" className={classes.title}>
             Có quá nhiều lý do để bắt đầu
           </Typography>
-          <Grid container className={classes.wrapper}>
+          <Grid container className={classes.wrapper_item}>
             <Grid item xs={4} className={classes.item}>
               <img src={pic1} alt="" />
               <CardContent>

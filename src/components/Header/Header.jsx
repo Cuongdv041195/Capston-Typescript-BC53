@@ -42,11 +42,6 @@ const Header = () => {
   const [key, setKey] = useState()
   const [listKhoaHoc, setListKhoaHoc] = useState()
 
-  // const infoUser = useQuery({
-  //   queryKey: 'info',
-  //   queryFn: getInfoUser,
-  // })
-
   const [isLoading, setIsLoading] = useState(false)
   const [dataUser, setDataUser] = useState('')
 
@@ -109,19 +104,19 @@ const Header = () => {
       })
   }, [open])
 
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 900,
-    height: 600,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    overflowY: 'scroll',
-    boxShadow: 24,
-    p: 3,
-  }
+  // const style = {
+  //   position: 'absolute',
+  //   top: '50%',
+  //   left: '50%',
+  //   transform: 'translate(-50%, -50%)',
+  //   width: 900,
+  //   height: 600,
+  //   bgcolor: 'background.paper',
+  //   border: '2px solid #000',
+  //   overflowY: 'scroll',
+  //   boxShadow: 24,
+  //   p: 3,
+  // }
 
   return (
     <>
@@ -148,7 +143,7 @@ const Header = () => {
                   ELEARNING
                 </Typography>
               </IconButton>
-              <div className={classes.selectFilm}>
+              <div className={classes.selectCourse}>
                 <FormControl className={classes.formControl}>
                   <NativeSelect
                     value={course}
@@ -174,7 +169,6 @@ const Header = () => {
                     onChange={(event) => {
                       handleSearch(event)
                     }}
-                    // onKeyDown={handleOnKeyPress}
                   />
 
                   {isLoading && (
@@ -226,6 +220,7 @@ const Header = () => {
                       {currentUser.hoTen}
                     </Typography>
                     <Button
+                      className={classes.logout_button}
                       size="large"
                       variant="contained"
                       onClick={() => {
@@ -268,35 +263,35 @@ const Header = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <div className={classes.modal}>
           <Typography
             component="h1"
-            style={{
-              fontSize: '25px',
-              fontWeight: 'bold',
-              textAlign: 'center',
-              padding: '20px 0',
-            }}
+            // style={{
+            //   fontSize: '25px',
+            //   fontWeight: 'bold',
+            //   textAlign: 'center',
+            //   padding: '20px 0',
+            // }}
           >
             Danh Sách Khóa Học Đăng Ký:
           </Typography>
           <Grid container>
             <Grid item xs={6}>
-              <Typography sx={{ mt: 2 }}>
+              <Typography component="h2" sx={{ mt: 2 }}>
                 <span style={{ fontWeight: 'bold' }}>Thông Tin Tài Khoản:</span>{' '}
                 {dataUser?.hoTen}
               </Typography>
-              <Typography sx={{ mt: 2 }}>
+              <Typography component="h2" sx={{ mt: 2 }}>
                 {' '}
                 <span style={{ fontWeight: 'bold' }}>Email:</span>{' '}
                 {dataUser?.email}
               </Typography>
-              <Typography sx={{ mt: 2 }}>
+              <Typography component="h2" sx={{ mt: 2 }}>
                 {' '}
                 <span style={{ fontWeight: 'bold' }}>Số Điện Thoại:</span>{' '}
                 {dataUser?.soDT}
               </Typography>
-              <Typography sx={{ mt: 2 }}>
+              <Typography component="h2" sx={{ mt: 2 }}>
                 {' '}
                 <span style={{ fontWeight: 'bold' }}>Mã Người Dùng:</span>{' '}
                 {dataUser?.maLoaiNguoiDung}
@@ -350,7 +345,7 @@ const Header = () => {
                           X
                         </span>
                       </Typography>
-                      <Typography id="modal-modal-description">
+                      <Typography component="h4" id="modal-modal-description">
                         Mã Khóa Học: {item.maKhoaHoc}
                       </Typography>
                     </div>
@@ -370,7 +365,7 @@ const Header = () => {
               )}
             </Grid>
           </Grid>
-        </Box>
+        </div>
       </Modal>
       <ScrollToTop top={50} color={'#fff'} />
     </>

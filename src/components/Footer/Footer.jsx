@@ -41,7 +41,7 @@ const Footer = () => {
               Hotline: 096.105.1011 - 098.407.5835
             </Typography>
             <Stack direction={'row'}>
-              <Grid item xs={2}>
+              <Grid item xs={6} md={4}>
                 <a
                   target="_blank"
                   href="https://www.facebook.com/lophocviet"
@@ -50,7 +50,7 @@ const Footer = () => {
                   <img className={classes.footerPartner} src={fblogo} />
                 </a>
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={6} md={4}>
                 <a
                   target="_blank"
                   href="https://www.youtube.com/@CyberSoftAcademy"
