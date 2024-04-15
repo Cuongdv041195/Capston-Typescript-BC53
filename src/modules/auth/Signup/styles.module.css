@@ -1,0 +1,15 @@
+.root {
+  margin: 30px 0;
+}
+
+.root input {
+  background-color: #fff !important;
+  border-radius: 5px !important;
+}
+
+.root h2 {
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}

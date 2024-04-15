@@ -14,6 +14,8 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { actBookCourse } from '../../../apis/booking'
 import { getInfoUser } from '../../../apis/userAPI'
 import Swal from 'sweetalert2'
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import { CURRENT_USER } from '../../../constants'
 import { PATH } from '../../../routes/path'
 const CourseProfile = ({ courseID }) => {
@@ -45,7 +47,14 @@ const CourseProfile = ({ courseID }) => {
             <Typography component="h1" className={classes.title}>
               Khóa Học: {data?.tenKhoaHoc}
             </Typography>
-            <Typography component="h1">Lượt Xem: {data?.luotXem}</Typography>
+
+            <Typography
+              component="h1"
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <RemoveRedEyeIcon />
+              Lượt Xem: {data?.luotXem}
+            </Typography>
             {/* <Typography component="h1">
               Số Lượng Học Viên Đăng Ký: {data?.soLuongHocVien}
             </Typography> */}
@@ -53,6 +62,7 @@ const CourseProfile = ({ courseID }) => {
               Chuyên Môn: {data?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
             </Typography>
             <Typography component="h1" className={classes.cost}>
+              <AttachMoneyIcon />
               Giá Khóa Học: 599k
             </Typography>
             <CardActions>
