@@ -5,6 +5,7 @@ import { useMutation } from '@tanstack/react-query'
 import { LoadingButton } from '@mui/lab'
 import { signinAPI } from '../../../apis/userAPI'
 import { Container, Grid, TextField, Typography } from '@mui/material'
+import Swal from 'sweetalert2'
 import { PATH } from '../../../routes/path'
 
 const SignIn = () => {
@@ -25,7 +26,13 @@ const SignIn = () => {
       if (values.maLoaiNguoiDung === 'GV') navigate(PATH.ADMIN)
     },
     onError: () => {
-      // alert("Lỗi rồi");
+      // console.log('error', error)
+      Swal.fire({
+        icon: 'error',
+        title: 'Sai Tên Đăng Nhập Hoặc Mật Khẩu',
+        confirmButtonText: 'Đồng ý',
+        confirmButtonColor: '#1976d2',
+      })
     },
   })
   const onSubmit = (formValues) => {
